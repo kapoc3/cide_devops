@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps - Ingeniería de Software</title>
+    <meta name="description"
+        content="Descubre el mundo de DevOps: integración continua, entrega continua y cultura de colaboración.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Dev<span class="highlight">Ops</span>.</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio.</a></li>
+                <li><a href="#conceptos">Conceptos</a></li>
+                <li><a href="#herramientas">Herramientas</a></li>
+                <li><a href="#contacto" class="btn-primary">Empezar</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Ingeniería de Software Moderna</span>
+                <h1>Construye, Despliega y <span class="gradient-text">Escala</span> más rápido.</h1>
+                <p>DevOps no es solo un conjunto de herramientas, es una cultura. Une el desarrollo y las operaciones
+                    para entregar valor continuo.</p>
+                <div class="hero-btns">
+                    <a href="#conceptos" class="btn-primary">Explorar DevOps <i class="fas fa-arrow-right"></i></a>
+                    <a href="#herramientas" class="btn-secondary">Ver Stack</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <pre><code><span class="kwd">pipeline</span> {
+    <span class="kwd">agent</span> any
+    <span class="kwd">stages</span> {
+        <span class="kwd">stage</span>(<span class="str">'Build'</span>) {
+            <span class="kwd">steps</span> {
+                <span class="cmd">sh</span> <span class="str">'npm install'</span>
+                <span class="cmd">sh</span> <span class="str">'npm run build'</span>
+            }
+        }
+        <span class="kwd">stage</span>(<span class="str">'Test'</span>) {
+            <span class="kwd">steps</span> {
+                <span class="cmd">sh</span> <span class="str">'npm test'</span>
+            }
+        }
+        <span class="kwd">stage</span>(<span class="str">'Deploy'</span>) {
+            <span class="kwd">steps</span> {
+                <span class="cmd">echo</span> <span class="str">'Deploying...'</span>
+            }
+        }
+    }
+}</code></pre>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <section id="conceptos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué es DevOps?</h2>
+                <p>El puente entre el código y el cliente.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-infinity"></i></div>
+                    <h3>Cultura Infinita</h3>
+                    <p>Colaboración continua entre desarrolladores y operadores para mejorar la calidad y velocidad.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-cogs"></i></div>
+                    <h3>Automatización</h3>
+                    <p>Elimina tareas manuales repetitivas. Desde el testing hasta el despliegue en producción.</p>
+                </div>
+                <div class="card glass-card">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Monitoreo</h3>
+                    <p>Observabilidad total del sistema para detectar y corregir errores antes que el usuario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="herramientas" class="section dark-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>El Toolchain</h2>
+                <p>Las herramientas que mueven el mundo del software moderno.</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-docker"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-jenkins"></i>
+                    <span>Jenkins</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fas fa-cubes"></i>
+                    <span>Kubernetes</span>
+                </div>
+                <div class="tool-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>DevOps.</h3>
+                <p>Materia de Ingeniería de Software.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 CIDE DevOps. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
