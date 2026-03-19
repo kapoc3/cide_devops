@@ -1,94 +1,59 @@
-# 🚀 Clase de Git: Domina el Flujo de Trabajo Básico
+# Frontend
 
-Bienvenido a esta guía práctica diseñada para ayudarte a entender y dominar los conceptos fundamentales de Git. Hoy aprenderemos a clonar repositorios, guardar nuestros cambios y compartirlos con el mundo.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
 
-## 📋 Contenido
-1. [Clonar un Repositorio](#1-clonar-un-repositorio)
-2. [Hacer Commit (Guardar Cambios)](#2-hacer-commit-guardar-cambios)
-3. [Hacer Push (Subir al Servidor)](#3-hacer-push-subir-al-servidor)
-4. [Resumen de Comandos](#4-resumen-de-comandos)
+## Development server
 
----
+To start a local development server, run:
 
-## 🏗️ 1. Clonar un Repositorio
-Clonar es el proceso de crear una copia local exacta de un repositorio que se encuentra en un servidor remoto (como GitHub o GitLab).
-
-### ¿Cómo se hace?
-1. Busca la URL del repositorio (usualmente termina en `.git`).
-2. Abre tu terminal y ejecuta:
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   ```
-3. Entra en la carpeta creada:
-   ```bash
-   cd <NOMBRE_DE_LA_CARPETA>
-   ```
-
----
-
-## ✍️ 2. Hacer Commit (Guardar Cambios)
-Un **commit** es como una "foto" o un punto de restauración de tu proyecto en un momento específico.
-
-### Pasos para realizar un commit:
-
-#### Paso A: Preparar los archivos (Staging)
-Antes de guardar, debemos decirle a Git qué archivos queremos incluir en la foto.
 ```bash
-git add <nombre_del_archivo>  # Para un archivo específico
-git add .                     # Para incluir TODOS los cambios
+ng serve
 ```
 
-#### Paso B: Crear el commit
-Ahora guardamos los cambios con un mensaje descriptivo que explique qué hemos hecho.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
 ```bash
-git commit -m "feat: agrega nueva funcionalidad de login"
-```
-> **Tip:** Intenta que tus mensajes sean claros y concisos.
-
----
-
-## 📤 3. Hacer Push (Subir al Servidor)
-Una vez que tienes tus "fotos" (commits) guardadas localmente, necesitas enviarlas al servidor remoto para que otros puedan verlas o para tener un respaldo.
-
-### ¿Cómo se hace?
-```bash
-git push origin <nombre_de_la_rama>
-```
-*   `origin`: Es el nombre corto del servidor remoto.
-*   `<nombre_de_la_rama>`: Usualmente es `main` o `master`.
-
----
-
-## 🌿 4. Trabajar con Ramas (Branches)
-Las ramas nos permiten trabajar en diferentes funcionalidades o correcciones sin afectar el código principal.
-
-### Crear una rama nueva:
-```bash
-git branch <nombre_de_la_rama>
+ng generate component component-name
 ```
 
-### Crear y cambiarse a la rama inmediatamente:
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
 ```bash
-git checkout -b <nombre_de_la_rama>
+ng generate --help
 ```
 
-### Cambiar entre ramas existentes:
+## Building
+
+To build the project run:
+
 ```bash
-git checkout <nombre_de_la_rama>
-# O usando el comando moderno:
-git switch <nombre_de_la_rama>
+ng build
 ```
 
----
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## 🛠️ 5. Resumen de Comandos Útiles
+## Running unit tests
 
-| Comando | Descripción |
-| :--- | :--- |
-| `git status` | Muestra el estado actual de tus archivos (cuáles han cambiado). |
-| `git log` | Muestra el historial de commits realizados. |
-| `git pull` | Trae los cambios más recientes del servidor a tu computadora. |
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
----
+```bash
+ng test
+```
 
-¡Felicidades! Ahora ya conoces el flujo básico de trabajo con Git. 🌟
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
