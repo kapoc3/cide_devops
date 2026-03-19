@@ -1,0 +1,22 @@
+<div class="greeting-container">
+  <h2>Saludo Personalizado</h2>
+
+  <form (ngSubmit)="onSubmit()" class="greeting-form">
+    <label for="name">Nombre:</label>
+    <input
+      type="text"
+      id="name"
+      [value]="name()"
+      (input)="name.set($any($event.target).value)"
+      placeholder="Ingresa tu nombre"
+    />
+    <button type="submit" [disabled]="loading()">
+      {{ loading() ? 'Enviando...' : 'Obtener Saludo' }}
+    </button>
+  </form>
+
+  <div class="result">
+    <p *ngIf="greeting()" class="success">{{ greeting() }}</p>
+    <p *ngIf="error()" class="error">{{ error() }}</p>
+  </div>
+</div>
