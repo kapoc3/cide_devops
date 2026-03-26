@@ -1,9 +1,0 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Repository
-metadata:
-  name: github-repo
-  namespace: argocd
-spec:
-  repo: https://github.com/kapoc/cide_devops
-  username: kapoc
-  password: ${GITHUB_TOKEN}

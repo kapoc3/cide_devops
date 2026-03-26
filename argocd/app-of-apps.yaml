@@ -1,17 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cide-app
+  name: cide-stack
   namespace: argocd
 spec:
   project: default
   source:
-    path: terraform
     repoURL: https://github.com/kapoc3/cide_devops
     targetRevision: develop
+    path: argocd
+    directory:
+      recurse: true
+      jsonnet: {}
   destination:
     server: https://kubernetes.default.svc
-    namespace: cide-app
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
