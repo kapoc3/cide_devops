@@ -55,3 +55,13 @@ skills-lock.json
 **/bin/
 **/obj/
 **/publish/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Terraform
+terraform/.terraform/
+*.tfstate
+*.tfstate.*
