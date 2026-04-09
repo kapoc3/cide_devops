@@ -6,6 +6,7 @@ services:
     container_name: prometheus
     volumes:
       - ./docker/observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./docker/observability/prometheus/rules.yml:/etc/prometheus/rules.yml
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
@@ -24,6 +25,7 @@ services:
       - "13000:3000"
     volumes:
       - ./docker/observability/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./docker/observability/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin

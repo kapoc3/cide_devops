@@ -1,0 +1,18 @@
+groups:
+  - name: api_recording_rules
+    interval: 30s
+    rules:
+      - record: service:http_requests_total:rate5m
+        expr: sum(rate(http_server_requests_seconds_count{service="helloworldapi"}[5m])) by (service, status)
+      
+      - record: service:http_latency_p50:rate5m
+        expr: histogram_quantile(0.50, sum(rate(http_server_requests_seconds_bucket{service="helloworldapi"}[5m])) by (le, service))
+      
+      - record: service:http_latency_p95:rate5m
+        expr: histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket{service="helloworldapi"}[5m])) by (le, service))
+      
+      - record: service:http_latency_p99:rate5m
+        expr: histogram_quantile(0.99, sum(rate(http_server_requests_seconds_bucket{service="helloworldapi"}[5m])) by (le, service))
+      
+      - record: service:http_errors_rate5m
+        expr: sum(rate(http_server_requests_seconds_count{service="helloworldapi",status=~"5.."}[5m])) by (service)
